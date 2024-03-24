@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
+import { ClerkProvider } from "@clerk/nextjs";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -11,9 +12,7 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "Tumble",
   description: "Your in-house Event Partner",
-  icons: {
-    icon: "/assests/images/Tumble.png",
-  },
+  icons: "/assets/images/Tumble.png",
 };
 
 export default function RootLayout({
@@ -22,8 +21,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={poppins.variable}>{children}</body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <body className={poppins.variable}>{children}</body>
+      </html>
+    </ClerkProvider>
   );
 }
