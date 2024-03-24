@@ -13,9 +13,12 @@ export const connectToDatabase = async () => {
     cached.promise ||
     mongoose.connect(MONGODB_URI, {
       dbName: "TUMBLE",
-      bufferCommands: false,
+      //bufferCommands: false,
     });
 
   cached.conn = await cached.promise;
   return cached.conn;
 };
+
+//Server actions
+//Each server action will call connectToDatabase
