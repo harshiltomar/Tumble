@@ -6,12 +6,9 @@ const Footer = () => {
     <footer className="border-t">
       <div className="flex-center wrapper flex-between flex flex-col gap-4 p-5 text-center sm:flex-row">
         <Link href="/">
-          <Image
-            src="/assets/images/Tumble.png"
-            alt="logo"
-            width={32}
-            height={9}
-          />
+          <h1 className=" text-violet-700">
+            <span className="font-bold">TUM</span>ble
+          </h1>
         </Link>
 
         <p>
