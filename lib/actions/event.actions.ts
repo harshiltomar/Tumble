@@ -13,11 +13,11 @@ export const createEvent = async ({
   try {
     await connectToDatabase();
 
-    const organizer = await User.findById(userId);
+    // const organizer = await User.findById(userId);
 
-    if (!organizer) {
-      throw new Error("Organizer not found");
-    }
+    // if (!organizer) {
+    //   throw new Error("Organizer not found");
+    // }
 
     const newEvent = await Event.create({
       ...event,
