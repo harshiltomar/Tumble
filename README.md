@@ -10,7 +10,7 @@
 
 - Hosting : GoDaddy.com
 - Deployment service: vercel
-- few commits have been made for vercel testing and hence higher volume of commits have been made
+- few commits have been made for vercel testing and hence higher volume of commits have been made.
 
 # WebHooks
 
