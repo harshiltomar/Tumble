@@ -33,7 +33,11 @@ const Collection = ({
 
               return (
                 <li key={event._id} className="flex justify-center">
-                  <Card />
+                  <Card
+                    event={event}
+                    hasOrderLink={hasOrderLink}
+                    hidePrice={hidePrice}
+                  />
                 </li>
               );
             })}

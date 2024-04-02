@@ -41,6 +41,7 @@
     "svix": "^1.21.0",
     "tailwind-merge": "^2.2.2",
     "tailwindcss-animate": "^1.0.7",
+    "twin.macro": "^3.4.1",
     "uploadthing": "^6.6.0",
     "zod": "^3.22.4"
   },
