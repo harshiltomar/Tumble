@@ -60,7 +60,7 @@ export const getEventByid = async (eventId: string) => {
   }
 };
 
-export const getAllEvent = async ({
+export const getAllEvents = async ({
   query,
   limit = 6,
   page,
