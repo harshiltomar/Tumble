@@ -45,11 +45,7 @@ const Card = ({ event, hasOrderLink, hidePrice }: CardProps) => {
       )}
       <Link
         href={`/events/${event._id}`}
-        className="flex min-h-[230px]"
-        flex-col
-        gap-3
-        p-5
-        md:gap-4
+        className="flex min-h-[230px] flex-col gap-3 p-5 md:gap-4"
       >
         {!hidePrice && (
           <div className="flex gap-2">
