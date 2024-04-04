@@ -1,4 +1,4 @@
-import { getEventByid } from "@/lib/actions/event.actions";
+import { getEventById } from "@/lib/actions/event.actions";
 import { formatDateTime } from "@/lib/utils";
 import { SearchParamProps } from "@/types";
 import Image from "next/image";
@@ -6,7 +6,7 @@ import React from "react";
 
 const EventDetails = async ({ params: { id } }: SearchParamProps) => {
   //
-  const event = await getEventByid(id);
+  const event = await getEventById(id);
 
   console.log(event);
   return (
