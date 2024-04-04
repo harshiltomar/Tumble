@@ -32,7 +32,7 @@ type EventFormProps = {
   userId: string;
   type: "Create" | "Update";
   event?: IEvent;
-  eventId: string;
+  eventId?: string;
 };
 
 //
