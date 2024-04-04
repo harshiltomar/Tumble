@@ -16,6 +16,8 @@ const Card = ({ event, hasOrderLink, hidePrice }: CardProps) => {
   //Logic to check if creator or not
   const { sessionClaims } = auth();
   const userId = sessionClaims?.userId as string;
+  console.log(userId);
+  console.log(event.organizer._id.toString());
 
   const isEventCreator = userId === event.organizer._id.toString();
 
@@ -43,10 +45,8 @@ const Card = ({ event, hasOrderLink, hidePrice }: CardProps) => {
           </Link>
         </div>
       )}
-      <Link
-        href={`/events/${event._id}`}
-        className="flex min-h-[230px] flex-col gap-3 p-5 md:gap-4"
-      >
+
+      <div className="flex min-h-[230px] flex-col gap-3 p-5 md:gap-4">
         {!hidePrice && (
           <div className="flex gap-2">
             <span className="p-semibold-14 w-min rounded-full bg-green-100 px-4 py-1 text-green-60">
@@ -85,7 +85,7 @@ const Card = ({ event, hasOrderLink, hidePrice }: CardProps) => {
             </Link>
           )}
         </div>
-      </Link>
+      </div>
     </div>
   );
 };
