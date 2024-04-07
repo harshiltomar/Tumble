@@ -13,11 +13,8 @@ type CardProps = {
 };
 
 const Card = ({ event, hasOrderLink, hidePrice }: CardProps) => {
-  //Logic to check if creator or not
   const { sessionClaims } = auth();
   const userId = sessionClaims?.userId as string;
-  console.log(userId);
-  console.log(event.organizer._id.toString());
 
   const isEventCreator = userId === event.organizer._id.toString();
 
@@ -28,8 +25,7 @@ const Card = ({ event, hasOrderLink, hidePrice }: CardProps) => {
         style={{ backgroundImage: `url(${event.imageUrl})` }}
         className="flex-center flex-grow bg-gray-50 bg-cover bg-center text-grey-500"
       />
-
-      {/* CHECK IF USER IS CREATOR IS NOT */}
+      {/* IS EVENT CREATOR ... */}
 
       {isEventCreator && !hidePrice && (
         <div className="absolute right-2 top-2 flex flex-col gap-4 rounded-xl bg-white p-3 shadow-sm transition-all">
@@ -40,9 +36,9 @@ const Card = ({ event, hasOrderLink, hidePrice }: CardProps) => {
               width={20}
               height={20}
             />
-
-            <DeleteConfirmation eventId={event._id} />
           </Link>
+
+          <DeleteConfirmation eventId={event._id} />
         </div>
       )}
 
@@ -92,4 +88,4 @@ const Card = ({ event, hasOrderLink, hidePrice }: CardProps) => {
 
 export default Card;
 
-//4.08.28
+//4.29

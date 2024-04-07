@@ -17,3 +17,8 @@
 - I have used webhooks to create the user into mongodb as soon as he signs in via Clerk Auth
 
 - ![alt text](image.png)
+
+# Stripe
+
+- payment : inr
+- Webhook Flow: ![alt text](image-1.png)
